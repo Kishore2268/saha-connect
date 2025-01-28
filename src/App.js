@@ -6,11 +6,10 @@ import CommunityDetails from "./pages/CommunityDetails";
 import ApplyForm from "./pages/ApplyForm";
 import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
+import Team from "./pages/Team";
 
 // Dummy components for demo purposes
 const About = () => <div className="h-full bg-gray-100">About Page</div>;
-const Team = () => <div className="h-full bg-gray-100">Team Page</div>;
-
 const Home = () => <div className="h-full bg-gray-100">Home Page</div>;
 
 const App = () => {

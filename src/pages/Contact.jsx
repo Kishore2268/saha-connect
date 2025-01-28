@@ -57,15 +57,15 @@ const Contact = () => {
   return (
     <div className="w-full mt-16">
       {/* Header Section */}
-      <div className="bg-blue-950 text-white py-10 text-center mb-10 lg:mb-16">
+      <div className="bg-blue-950 text-white py-32 text-center mb-10 lg:mb-16">
         {/* Title of the page */}
-        <h1 className="text-3xl font-bold text-yellow-200 flex justify-center items-center gap-3">
-          <FaEnvelope size={30} /> Contact Us {/* Icon and title */}
+        <h1 className="text-6xl font-bold text-yellow-200 flex justify-center items-center gap-3">
+          <FaEnvelope size={60} /> Contact Us {/* Icon and title */}
         </h1>
       </div>
 
       {/* Contact Details Section */}
-      <div className="bg-white py-16 px-8 lg:px-32 flex flex-col lg:flex-row mb-10 lg:mb-16 gap-6 justify-center">
+      <div className="bg-white py-20 px-8 lg:px-32 flex flex-col lg:flex-row mb-10 lg:mb-16 gap-6 justify-center">
         {/* Phone Number */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start group border-b lg:border-r lg:border-b-0 border-gray-300 pb-8 lg:pb-0 lg:pr-8">
           <FaPhoneAlt
