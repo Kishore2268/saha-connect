@@ -161,7 +161,7 @@ const Lists = () => {
               className={`
                 relative group bg-white border border-gray-300 p-6 rounded-2xl shadow-2xl transform transition-all hover:border-blue-950 hover:border-2 hover:bg-yellow-200 flex h-72 lg:h-80 2xl:h-88 3xl:h-96 items-center
                 ${hoveredCard === index
-                  ? "w-88 md:w-112 lg:w-120 2xl:w-136 3xl:w-160"
+                  ? "w-88 md:w-112 lg:w-112 2xl:w-128 3xl:w-160"
                   : "w-72 md:w-96 lg:w-104 2xl:w-120 3xl:w-144"}
                 transition-all duration-500
                 ${hoveredCard === null || hoveredCard === index
