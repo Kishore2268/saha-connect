@@ -29,7 +29,7 @@ const Lists = () => {
     anime({
       targets: titleElement.querySelectorAll("span"),
       translateY: ["-30px", "0px"],
-      opacity: [0, 1], 
+      opacity: [0, 1],
       easing: "easeOutElastic(1, 0.8)",
       duration: 100,
       delay: anime.stagger(100),
@@ -37,10 +37,18 @@ const Lists = () => {
   }, []);
 
   const handleNavigate = (partnerId) => {
-    navigate(`/partners/${partnerId}`);
+    navigate(`/partners/${partnerId}`); // navigate to the specific partner
   };
 
-  const partners = [
+  const handleCardInteraction = (index) => {
+    // For mobile devices, treat it as a click/tap event
+    if (window.innerWidth <= 768) {
+      setHoveredCard(index); // Toggle the card on click for mobile
+    }
+  };
+
+  // partners array to store partner data
+  const partners = [        
     {
       id: 1,
       name: "Partner A",
@@ -149,24 +157,21 @@ const Lists = () => {
         >
           {partners.map((partner, index) => (
             <div
-              key={partner.id}
+              key={partner.id} // mapped the partner details with the unique key - id of the partner
               className={`
                 relative group bg-white border border-gray-300 p-6 rounded-2xl shadow-2xl transform transition-all hover:border-blue-950 hover:border-2 hover:bg-yellow-200 flex h-64 lg:h-80 items-center
-                ${
-                  hoveredCard === index
-                    ? "w-88 md:w-104 lg:w-120"
-                    : "w-72 md:w-88 lg:w-104"
-                }
+                ${hoveredCard === index
+                  ? "w-88 md:w-104 lg:w-120"
+                  : "w-72 md:w-88 lg:w-104"}
                 transition-all duration-500
-                ${
-                  hoveredCard === null || hoveredCard === index
-                    ? "lg:opacity-100"
-                    : "lg:opacity-50"
-                }
+                ${hoveredCard === null || hoveredCard === index
+                  ? "lg:opacity-100"
+                  : "lg:opacity-50"}
                 sm:opacity-100 md:opacity-100
               `}
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
+              onClick={() => handleCardInteraction(index)} // onClick for mobile
             >
               {/* Main Card Content */}
               <div className="flex flex-col justify-between w-2/3">

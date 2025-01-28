@@ -40,6 +40,11 @@ module.exports = {
         208: '52rem',
         224: '56rem',
       },
+
+      //custom border
+      borderWidth: {
+        1: '1px',
+      },
     },
   },
   plugins: [],

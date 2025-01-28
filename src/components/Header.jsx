@@ -125,8 +125,8 @@ const Header = () => {
       {/* Mobile Navbar */}
       <div
         className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-          isMenuOpen ? "max-h-[1000px]" : "max-h-0"
-        } bg-yellow-200 bg-opacity-50 backdrop-blur-lg shadow-lg`}
+          isMenuOpen ? "max-h-[1000px] border-t-1 border-gray-400" : "max-h-0"
+        } bg-yellow-200 bg-opacity-50  backdrop-blur-lg shadow-lg`}
       >
         <nav className="flex flex-col space-y-4 px-6 py-4">
           <NavLink
