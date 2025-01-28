@@ -4,6 +4,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      //custom screen breakpoints
+      screens: {
+        '3xl': '1920px', // Add a 3xl breakpoint
+      },
       colors: {
         yellow: {
           200: "#D8E28C", //custom lime yellow color

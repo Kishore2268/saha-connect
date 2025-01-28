@@ -159,10 +159,10 @@ const Lists = () => {
             <div
               key={partner.id} // mapped the partner details with the unique key - id of the partner
               className={`
-                relative group bg-white border border-gray-300 p-6 rounded-2xl shadow-2xl transform transition-all hover:border-blue-950 hover:border-2 hover:bg-yellow-200 flex h-64 lg:h-80 items-center
+                relative group bg-white border border-gray-300 p-6 rounded-2xl shadow-2xl transform transition-all hover:border-blue-950 hover:border-2 hover:bg-yellow-200 flex h-72 lg:h-80 2xl:h-88 3xl:h-96 items-center
                 ${hoveredCard === index
-                  ? "w-88 md:w-104 lg:w-120"
-                  : "w-72 md:w-88 lg:w-104"}
+                  ? "w-88 md:w-112 lg:w-120 2xl:w-136 3xl:w-160"
+                  : "w-72 md:w-96 lg:w-104 2xl:w-120 3xl:w-144"}
                 transition-all duration-500
                 ${hoveredCard === null || hoveredCard === index
                   ? "lg:opacity-100"
@@ -175,14 +175,14 @@ const Lists = () => {
             >
               {/* Main Card Content */}
               <div className="flex flex-col justify-between w-2/3">
-                <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 mb-2 lg:mb-4 hover:text-blue-950 transition-colors">
+                <h2 className="text-xl lg:text-2xl 2xl:text-3xl font-semibold text-gray-800 mb-2 lg:mb-4 hover:text-blue-950 transition-colors">
                   {partner.name}
                 </h2>
-                <ul className="space-y-4 mb-6">
+                <ul className="space-y-4 lg:space-y-6 2xl:space-y-7 mb-6 md:mb-6 3xl:mb-7">
                   {partner.benefits.map((benefit, idx) => (
                     <li
                       key={idx}
-                      className="w-64 flex items-center text-gray-700 text-md lg:text-lg"
+                      className="w-48 2xl:w-80 3xl:w-88 flex items-center text-gray-700 text-md lg:text-lg 2xl:text-2xl 3xl:text-3xl"
                     >
                       <FaCheckCircle className="text-green-500 mr-3 text-xl" />
                       {benefit}
@@ -190,7 +190,7 @@ const Lists = () => {
                   ))}
                 </ul>
                 <button
-                  className="w-48 lg:56 py-3 px-6 border-2 border-gray-400 bg-blue-950 text-yellow-200 font-semibold rounded-lg hover:bg-blue-950 hover:text-yellow-200 transition duration-500 transform hover:scale-105 mb-2 lg:mb-0"
+                  className="w-48 lg:56 2xl:w-72 py-3 px-6 border-2 border-gray-400 bg-blue-950 text-yellow-200 font-semibold rounded-lg hover:bg-blue-950 hover:text-yellow-200 transition duration-500 transform hover:scale-105 mb-2 lg:mb-0"
                   onClick={() => handleNavigate(partner.id)}
                 >
                   Avail Now
@@ -207,7 +207,7 @@ const Lists = () => {
                   src={partner.image}
                   alt={partner.name}
                   loading="lazy"
-                  className="w-32 h-32 lg:w-full lg:h-full object-cover rounded-xl"
+                  className="w-40 h-40 md:w-48 md:h-48 lg:w-full lg:h-full object-cover rounded-xl"
                 />
               </div>
             </div>
