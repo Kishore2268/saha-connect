@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
+
+// teamMembers array to store team members data
 const teamMembers = [
     {
         name: "John Doe",
@@ -101,6 +103,7 @@ const teamMembers = [
       },
 ];
 
+// Framer Motion animation variants for the team member cards
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
